@@ -1,8 +1,8 @@
 /*
  * display.c
  *
- *  Created on: Nov 23, 2020
- *      Author: Stancoj
+ *  Created on: Dec 14, 2021
+ *      Author: Marek Pohancenik
  */
 
 #include "main.h"
@@ -39,29 +39,51 @@
 #define DIGIT_4_ON		LL_GPIO_SetOutputPin(GPIOA, LL_GPIO_PIN_2)
 #define DIGIT_TIME_ON	LL_GPIO_SetOutputPin(GPIOA, LL_GPIO_PIN_7)
 
-typedef struct
-{
-	uint8_t digit[4];
-	uint8_t digit_num;
-	uint8_t negative;
-	uint8_t resolution;
-}display_data_;
+
 
 void resetDigits(void);
 void setDigits(void);
 void resetSegments(void);
 void setSegments(void);
 
-void setDecimalPoint(void);
-void setOne(void);
-void setTwo(void);
-void setThree(void);
-void setFour(void);
-void setFive(void);
-void setSix(void);
-void setSeven(void);
-void setEight(void);
-void setNine(void);
-void setZero(void);
+void display_update(char c, uint8_t dgt);
+void display_show(char znk[50]);
 
-void displayNumber(double num);
+void setDecimalPoint(void);
+void character_A(void);
+void character_B(void);
+void character_C(void);
+void character_D(void);
+void character_E(void);
+void character_F(void);
+void character_G(void);
+void character_H(void);
+void character_I(void);
+void character_J(void);
+void character_K(void);
+void character_L(void);
+void character_M(void);
+void character_N(void);
+void character_O(void);
+void character_P(void);
+void character_Q(void);
+void character_R(void);
+void character_S(void);
+void character_T(void);
+void character_U(void);
+void character_V(void);
+void character_W(void);
+void character_X(void);
+void character_Y(void);
+void character_Z(void);
+void character_1(void);
+void character_2(void);
+void character_3(void);
+void character_4(void);
+void character_5(void);
+void character_6(void);
+void character_7(void);
+void character_8(void);
+void character_9(void);
+void character_0(void);
+void character_podciar(void);
